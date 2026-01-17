@@ -1,4 +1,4 @@
-package com.company.bookstore.domain
+package com.company.bookstore.domain.entities
 
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
@@ -10,19 +10,19 @@ import jakarta.persistence.Table
 // Class yonidan e'lon qilinadigan konstructor primary constructor deyiladi, qolganlari secondary constructor
 @Entity
 @Table(name = "authors")
-data class Author(
+data class AuthorEntity(
 
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "author_id_seq")
-    var id: Long?,
+    val id: Long?,
     @Column(name = "name")
-    var name: String,
+    val name: String,
     @Column(name = "age")
-    var age: Int,
+    val age: Int,
     @Column(name = "description")
-    var description: String,
+    val description: String,
     @Column(name = "image")
-    var image: String
+    val image: String
 )
 
